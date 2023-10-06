@@ -19,9 +19,9 @@ const LearnUseState = () => {
         hobi: "makan",
     });
 
-    const ubahDataDiri = (e) => {
+    const ubahDataDiri = ({name=e.target.name,value=e.target.value }) => {
         setDataMahasiswa((_dataDiri) => {
-            return { ...dataMahasiswa, [e.target.name]: e.target.value };
+            return { ...dataMahasiswa, [name]: value };
         });
     };
 
